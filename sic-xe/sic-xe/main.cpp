@@ -20,7 +20,7 @@ class instruction
     string operand;
     string label;
     string comment;
-    
+    string registers;
 };
 
 #include <iostream>
