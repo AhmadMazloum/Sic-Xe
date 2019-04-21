@@ -1,11 +1,27 @@
-//
-//  main.cpp
-//  sic-xe
-//
-//  Created by Ahmad Mazloum on 4/21/19.
-//  Copyright © 2019 Ahmad Mazloum. All rights reserved.
-//
-
+#include <fstream>
+#include <string>
+#include<iostream>
+#include<stdio.h>
+#include<vector>
+#include<cstring>
+#include<algorithm>
+#include<set>
+#include<map>
+#include<queue>
+#include<stack>
+#include<math.h>
+using namespace std;
+int pc;
+class instruction
+{
+    int memory;
+    int line;
+    string op_code;
+    string operand;
+    string label;
+    string comment;
+    
+};
 #include <iostream>
 
 int main(int argc, const char * argv[])
