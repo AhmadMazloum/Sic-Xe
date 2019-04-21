@@ -24,7 +24,6 @@ class instruction
     bool errors[14];
 };
 
-#include <iostream>
 
 int main(int argc, const char * argv[])
 {
