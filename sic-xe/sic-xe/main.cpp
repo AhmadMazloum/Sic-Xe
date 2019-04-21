@@ -21,6 +21,7 @@ class instruction
     string label;
     string comment;
     string registers;
+    bool errors[14];
 };
 
 #include <iostream>
