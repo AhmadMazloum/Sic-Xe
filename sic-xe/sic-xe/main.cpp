@@ -16,12 +16,13 @@ class instruction
 {
     int memory;
     int line;
-    string op_code;
+    string operation;
     string operand;
     string label;
     string comment;
     
 };
+
 #include <iostream>
 
 int main(int argc, const char * argv[])
