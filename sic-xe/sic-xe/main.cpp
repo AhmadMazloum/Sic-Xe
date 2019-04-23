@@ -22,6 +22,13 @@ class instruction
     string comment;
     string registers;
     bool errors[14];
+    instruction()
+    {
+        for (int i = 0; i <= 14 ; i++)
+        {
+            errors[i] = false;
+        }
+    }
 };
 
 void check(instruction &n){
