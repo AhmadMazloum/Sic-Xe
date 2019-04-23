@@ -11,7 +11,7 @@
 #include<stack>
 #include<math.h>
 using namespace std;
-int pc;
+int pc=0;
 class instruction
 {
   public:  int memory;
@@ -40,11 +40,12 @@ void check(instruction &n){
        if(n.operand[1]!=','){n.errors[9]=true;}
        for(int i=0;i<6;i++){
         if(tolower(n.operand[0])==arr[i]){found=true;break;}
-
-       }
+}
        if(found==false){n.errors[9]=true;}
-       for(int i=0;i<6;i++){
-        if(tolower(n.operand[2])==arr[i]){found=true;break;}
+       found=false;
+       for(int j=0;j<6;j++){
+
+        if(tolower(n.operand[2])==arr[j]){found=true;break;}
 
        }
        if(found==false){n.errors[9]=true;}
@@ -67,6 +68,7 @@ else if(n.operation=="+RMO"){
 
        }
        if(found==false){n.errors[9]=true;}
+        found=false;
        for(int i=0;i<6;i++){
         if(tolower(n.operand[2])==arr[i]){found=true;break;}
 
@@ -89,6 +91,7 @@ else if(n.operation=="SUBR"){
 
        }
        if(found==false){n.errors[9]=true;}
+        found=false;
        for(int i=0;i<6;i++){
         if(tolower(n.operand[2])==arr[i]){found=true;break;}
 
@@ -111,6 +114,7 @@ else if((n.operation=="COMPR")){
 
        }
        if(found==false){n.errors[9]=true;}
+       found=false;
        for(int i=0;i<6;i++){
         if(tolower(n.operand[2])==arr[i]){found=true;break;}
 
@@ -141,6 +145,16 @@ else if(n.operation=="+TIXR"){
 }
 int main(int argc, const char * argv[])
 {
+ instruction x;//=new instruction();
+x.operand="x,s";
+x.operation="RMO";
+printf(" %c \n",x.operand[0]);
+printf(" %c \n",x.operand[1]);
+printf(" %c \n",x.operand[2]);
+
+check(x);
+if(x.errors[9]==true||x.errors[11]==true){printf("ERROR");}
+else{printf("success");}
 
     //
     return 0;
