@@ -10,6 +10,7 @@
 #include<queue>
 #include<stack>
 #include<math.h>
+#include <regex>
 using namespace std;
 int pc=0;
 class instruction
