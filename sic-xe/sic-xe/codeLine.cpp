@@ -1,6 +1,7 @@
 #include "codeLine.h"
 codeLine::codeLine(string &line, int lineNo){
   this->line = line;
+  transform(this->line.begin(), this->line.end(), this->line.begin(), ::tolower); 
   this->lineNo = lineNo;
 }
 void codeLine::setMode(bool mode){
