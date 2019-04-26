@@ -15,7 +15,8 @@ public:
   void setMode(bool mode);
   void loadPc(int pc); 
   void validate(); // validates line for errors and saves its address
+  int getNewPc(); // return the new pc
+private:
   void validateFreeFormat();
   void validateFixedFormat();
-  int getNewPc(); // return the new pc 
 }; 
