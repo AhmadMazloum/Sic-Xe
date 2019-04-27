@@ -22,9 +22,9 @@ class assembler
   unordered_set<string> mustLabelled; //byte,word,equ
   unordered_set<string> mustUnlabelled; //end,origin,base
   map<string,regex> operandPatterns;
-  unordered_map<int,string> errorMsg;
   unordered_set<string> labels;
   unordered_map<string,int> unknownLabels;
+  unordered_map<int,string> errorMsg;
   vector<codeLine> codeLines;
 public:
   assembler(bool mode, char* readFilePath, char* writeFilePath);
