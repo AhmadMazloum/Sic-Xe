@@ -66,7 +66,7 @@ void assembler::run(){
   for(codeLine line : codeLines){
     line.setMode(mode);
     line.loadPc(pc);
-    line.validate();
+    line.validate(mustLabelled, mustUnlabelled, operandPatterns,labels, unknownLabels);
     pc = line.getNewPc();
   }
   fp.writeFile(writeFilePath, codeLines);
