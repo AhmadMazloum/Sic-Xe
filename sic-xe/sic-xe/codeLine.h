@@ -1,10 +1,12 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <unordered_set>
-#include <unordered_map>
+#include <set>
 #include <map>
+#include <map>
+#include <set>
 #include <regex>
+
 using namespace std;
 class codeLine
 {
@@ -18,9 +20,12 @@ public:
   codeLine(string &line, int lineNo);
   void setMode(bool mode);
   void loadPc(int pc); 
-  void validate(unordered_set<string> &mustLabelled, unordered_set<string> &mustUnlabelled, map<string,regex> &operandPatterns, unordered_set<string> &labels, unordered_map<string,int> &unknownLabels); // validates line for errors and saves its address
+  void validate(set<string> &mustLabelled, set<string> &mustUnlabelled, map<string,regex> &operandPatterns, set<string> &labels, map<string,int> &unknownLabels); // validates line for errors and saves its address
   int getNewPc(); // return the new pc
+  int hex2dec(string hex);
+  string dec2hex(int dec);
+  string getHexAddress();
 private:
-  void validateFreeFormat(unordered_set<string> &mustLabelled, unordered_set<string> &mustUnlabelled, map<string,regex> &operandPatterns, unordered_set<string> &labels, unordered_map<string,int> &unknownLabels);
-  void validateFixedFormat(unordered_set<string> &mustLabelled, unordered_set<string> &mustUnlabelled, map<string,regex> &operandPatterns, unordered_set<string> &labels, unordered_map<string,int> &unknownLabels);
+  void validateFreeFormat(set<string> &mustLabelled, set<string> &mustUnlabelled, map<string,regex> &operandPatterns, set<string> &labels, map<string,int> &unknownLabels);
+  void validateFixedFormat(set<string> &mustLabelled, set<string> &mustUnlabelled, map<string,regex> &operandPatterns, set<string> &labels, map<string,int> &unknownLabels);
 }; 

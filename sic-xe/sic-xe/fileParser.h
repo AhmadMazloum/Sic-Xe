@@ -2,6 +2,10 @@
 class fileParser
 {
   public:
-    vector<codeLine> readFile(char*path);
-    void writeFile(char*path,vector<codeLine> &codeLines);
+    vector<string> errorMsg;
+    char * path;
+    bool mode;
+    fileParser(vector<string> errorMsg,bool mode);
+    vector<codeLine> readFile(char * path);
+    void writeFile(vector<codeLine> &codeLines,char * path);
 };

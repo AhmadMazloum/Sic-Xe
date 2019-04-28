@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ACC5B398226CD4D400EBCF06 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B397226CD4D400EBCF06 /* main.cpp */; };
+		ACC5B3B5227620B300EBCF06 /* assembler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B3B4227620B300EBCF06 /* assembler.cpp */; };
+		ACC5B3BA227620BA00EBCF06 /* fileParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B3B6227620BA00EBCF06 /* fileParser.cpp */; };
+		ACC5B3BB227620BA00EBCF06 /* codeLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACC5B3B9227620BA00EBCF06 /* codeLine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		ACC5B394226CD4D400EBCF06 /* sic-xe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sic-xe"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC5B397226CD4D400EBCF06 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ACC5B3B4227620B300EBCF06 /* assembler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = assembler.cpp; sourceTree = "<group>"; };
+		ACC5B3B6227620BA00EBCF06 /* fileParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fileParser.cpp; sourceTree = "<group>"; };
+		ACC5B3B7227620BA00EBCF06 /* codeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeLine.h; sourceTree = "<group>"; };
+		ACC5B3B8227620BA00EBCF06 /* assembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assembler.h; sourceTree = "<group>"; };
+		ACC5B3B9227620BA00EBCF06 /* codeLine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = codeLine.cpp; sourceTree = "<group>"; };
+		ACC5B3BC227620C500EBCF06 /* fileParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				ACC5B397226CD4D400EBCF06 /* main.cpp */,
+				ACC5B3B4227620B300EBCF06 /* assembler.cpp */,
+				ACC5B3B8227620BA00EBCF06 /* assembler.h */,
+				ACC5B3B9227620BA00EBCF06 /* codeLine.cpp */,
+				ACC5B3B7227620BA00EBCF06 /* codeLine.h */,
+				ACC5B3B6227620BA00EBCF06 /* fileParser.cpp */,
+				ACC5B3BC227620C500EBCF06 /* fileParser.h */,
 			);
 			path = "sic-xe";
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC5B3BB227620BA00EBCF06 /* codeLine.cpp in Sources */,
+				ACC5B3BA227620BA00EBCF06 /* fileParser.cpp in Sources */,
+				ACC5B3B5227620B300EBCF06 /* assembler.cpp in Sources */,
 				ACC5B398226CD4D400EBCF06 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

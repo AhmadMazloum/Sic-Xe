@@ -61,7 +61,7 @@ void assembler::loadErrorMsg(){
 
 }
 void assembler::run(){
-  fileParser fp;
+  fileParser fp(errorMsg,mode);
   codeLines = fp.readFile(readFilePath);
   for(codeLine line : codeLines){
     line.setMode(mode);
@@ -69,5 +69,5 @@ void assembler::run(){
     line.validate(mustLabelled, mustUnlabelled, operandPatterns,labels, unknownLabels);
     pc = line.getNewPc();
   }
-  fp.writeFile(writeFilePath, codeLines);
+  fp.writeFile(codeLines,readFilePath);
 }
